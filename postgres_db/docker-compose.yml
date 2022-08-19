@@ -1,0 +1,50 @@
+version: '3.9'
+
+services:
+  db:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_USER: sqlpad
+      POSTGRES_PASSWORD: sqlpad
+    healthcheck:
+      test: ['CMD-SHELL', 'pg_isready -U sqlpad']
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    ports:
+      - '5432:5432'
+    logging:
+      options:
+        max-size: 10m
+        max-file: '3'
+    volumes:
+      - ./db:/var/lib/postgresql/data
+      - ./sql:/docker-entrypoint-initdb.d/
+
+  sqlpad:
+    image: sqlpad/sqlpad:6
+    depends_on:
+      - db
+    hostname: 'sqlpad'
+    ports:
+      - '3000:3000'
+    environment:
+      SQLPAD_ADMIN: 'admin@admin.com'
+      SQLPAD_AUTH_DISABLED_DEFAULT_ROLE: 'admin'
+      SQLPAD_AUTH_DISABLED: 'true'
+      SQLPAD_APP_LOG_LEVEL: info
+      SQLPAD_WEB_LOG_LEVEL: warn
+      SQLPAD_CONNECTIONS__psql__name: psql_conn
+      SQLPAD_CONNECTIONS__psql__driver: postgres
+      SQLPAD_CONNECTIONS__psql__host: db
+      SQLPAD_CONNECTIONS__psql__username: sqlpad
+      SQLPAD_CONNECTIONS__psql__password: sqlpad
+      SQLPAD_CONNECTIONS__psql__multiStatementTransactionEnabled: 'true'
+      SQLPAD_CONNECTIONS__psql__idleTimeoutSeconds: 86400
+
+volumes:
+  postgres:
+    driver: local
+  sqlpad:
+    driver: local
