@@ -2,7 +2,7 @@
 
 This project explore the relatio nwith React JS, Golang with Fiber V2 and Postgre.
 
-![preview](https://im.ezgif.com/tmp/ezgif-1-20a9821672.gif)
+![preview](https://s4.gifyu.com/images/ezgif.com-gif-makerab4109f351a5c5a8.gif)
 
 ## The Steps
 
