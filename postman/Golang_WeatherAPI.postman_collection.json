@@ -12,7 +12,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8081/api/users",
+					"raw": "http://localhost:8081/api/weathers",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -20,7 +20,7 @@
 					"port": "8081",
 					"path": [
 						"api",
-						"users"
+						"weathers"
 					]
 				}
 			},
@@ -32,7 +32,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8081/api/users/1",
+					"raw": "http://localhost:8081/api/weathers/1",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -40,7 +40,7 @@
 					"port": "8081",
 					"path": [
 						"api",
-						"users",
+						"weathers",
 						"1"
 					]
 				}
@@ -78,7 +78,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"name\": \"Keven Dios\",\n    \"email\": \"ktendeux@gmail.com\",\n    \"date\": \"2022-08-04\",\n    \"city\": \"Montreal\",\n    \"country\": \"United States\"\n}",
+					"raw": "{\n    \"title\": \"Montreal Shanchez\",\n    \"email\": \"ktendeux@gmail.com\",\n    \"prediction\": \"55\",\n    \"date\": \"2022-08-04\",\n    \"city\": \"Montreal\",\n    \"country\": \"United States\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -86,7 +86,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8081/api/users",
+					"raw": "http://localhost:8081/api/weathers",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -94,7 +94,7 @@
 					"port": "8081",
 					"path": [
 						"api",
-						"users"
+						"weathers"
 					]
 				}
 			},
@@ -110,7 +110,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"name\": \"Keven Tendre\",\n    \"email\": \"ktendeux@gmail.com\",\n    \"date\": \"2022-08-04\",\n    \"city\": \"Montreal\",\n    \"country\": \"United States\"\n}",
+					"raw": "{\n    \"name\": \"Frank belford\",\n    \"email\": \"jfrank@gmail.com\",\n    \"date\": \"2022-07-31T20:00:00-04:00\",\n    \"prediction\": \"2\",\n    \"city\": \"Montreal\",\n    \"country\": \"United States\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -118,7 +118,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8081/api/users/2",
+					"raw": "http://localhost:8081/api/weathers/1",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -126,8 +126,8 @@
 					"port": "8081",
 					"path": [
 						"api",
-						"users",
-						"2"
+						"weathers",
+						"1"
 					]
 				}
 			},
