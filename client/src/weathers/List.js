@@ -16,6 +16,7 @@ export default function List() {
       : '';
 
     try {
+      setWeathers('');
       const res = await fetch(`${API_URL}/weathers?sort=-id&size=5${page}`);
       const json = await res.json();
       setWeathers(json.data.items);
@@ -28,8 +29,8 @@ export default function List() {
   const completeForm = (form) => {
     closeModal();
     form.reset();
-    fetchData();
     navigate('/');
+    fetchData();
   };
 
   useEffect(() => {
