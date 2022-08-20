@@ -1,5 +1,17 @@
 # go_weather_fullstack
 
+This project explore the relatio nwith React JS, Golang with Fiber V2 and Postgre.
+
+## The Steps
+
+- Start Docker
+
+- Start postgres DB
+
+- Start the server golang
+
+- start and install node for React JS
+
 ### Postgres UI
 
 - cd postgres_db && docker-compose up
