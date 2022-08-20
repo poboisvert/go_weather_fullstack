@@ -28,7 +28,7 @@ services:
       - db
     hostname: 'sqlpad'
     ports:
-      - '3000:3000'
+      - '5555:3000'
     environment:
       SQLPAD_ADMIN: 'admin@admin.com'
       SQLPAD_AUTH_DISABLED_DEFAULT_ROLE: 'admin'
